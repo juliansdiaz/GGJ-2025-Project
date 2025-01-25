@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] Material enemyMat;
+    public static bool enemyCured;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,8 @@ public class Enemy : MonoBehaviour
         if(PlayerMovement.playerIsInDamageArea == true && Gun.didShoot == true)
         {
             enemyMat.color = Color.green;
+            enemyCured = true;
+            GameManager.Instance.ammo = 0.0f;
         }
     }
 }

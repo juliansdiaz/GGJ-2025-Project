@@ -28,16 +28,15 @@ public class Gun : MonoBehaviour
             if(GameManager.Instance.ammo > 0)
             {
                 didShoot = true;
-                GameManager.Instance.ammo -= 20f; ;
                 GameObject projectile = Instantiate(bubblesParticle) as GameObject;
                 projectile.transform.position = transform.position + Camera.main.transform.forward * 2;
                 Rigidbody rb = projectile.GetComponent<Rigidbody>();
                 rb.velocity = Camera.main.transform.forward * 20;
             }
-            else
-            {
-                didShoot = false;
-            }
+        }
+        else
+        {
+            didShoot = false;
         }
     }
 }
