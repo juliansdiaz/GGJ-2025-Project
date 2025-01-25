@@ -49,4 +49,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //ReloadGun
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("AmmoBox") && GameManager.Instance.ammo < 100.0f)
+        {
+            Debug.Log("Bubbles charged");
+            GameManager.Instance.ammo = 100.0f;
+            Destroy(other.gameObject);
+        }
+    }
+
 }
