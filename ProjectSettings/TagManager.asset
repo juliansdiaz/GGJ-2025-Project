@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - AmmoBox
+  - DamageArea
   layers:
   - Default
   - TransparentFX

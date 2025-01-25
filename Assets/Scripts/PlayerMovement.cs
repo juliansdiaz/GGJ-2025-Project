@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] float sphereRadius = 0.3f;
     [SerializeField] LayerMask groundMask;
-    
+
+    public static bool playerIsInDamageArea;
     CharacterController playerController;
     float gravityScale = -9.81f;
     Vector3 playerVelocity;
@@ -57,6 +58,21 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Bubbles charged");
             GameManager.Instance.ammo = 100.0f;
             Destroy(other.gameObject);
+        }
+        
+        if (other.gameObject.CompareTag("DamageArea"))
+        {
+            Debug.Log("Player inside damage area");
+            playerIsInDamageArea = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("DamageArea"))
+        {
+            Debug.Log("Player outside damage area");
+            playerIsInDamageArea = false;
         }
     }
 
