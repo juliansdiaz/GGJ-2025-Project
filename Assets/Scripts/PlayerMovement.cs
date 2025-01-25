@@ -50,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //ReloadGun
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("AmmoBox") && GameManager.Instance.ammo < 100.0f)
@@ -59,10 +58,26 @@ public class PlayerMovement : MonoBehaviour
             GameManager.Instance.ammo = 100.0f;
             Destroy(other.gameObject);
         }
-        
+
         if (other.gameObject.CompareTag("DamageArea"))
         {
             Debug.Log("Player inside damage area");
+            playerIsInDamageArea = true;
+        }
+        else if (other.gameObject.CompareTag("DamageFear"))
+        {
+            playerIsInDamageArea = true;
+        }
+        else if (other.gameObject.CompareTag("DamageAlone"))
+        {
+            playerIsInDamageArea = true;
+        }
+        else if (other.gameObject.CompareTag("DamageSelfDemand"))
+        {
+            playerIsInDamageArea = true;
+        }
+        else if (other.gameObject.CompareTag("DamageSelfDemand"))
+        {
             playerIsInDamageArea = true;
         }
     }

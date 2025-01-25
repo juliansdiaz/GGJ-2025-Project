@@ -6,6 +6,10 @@ TagManager:
   tags:
   - AmmoBox
   - DamageArea
+  - DamageFear
+  - DamageAlone
+  - DamageSelfDemand
+  - DamageHopeless
   layers:
   - Default
   - TransparentFX
