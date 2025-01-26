@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Animations;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] float sphereRadius = 0.3f;
     [SerializeField] LayerMask groundMask;
-     [SerializeField] AnimationController animationController;
+     [SerializeField] Animator animationController;
 
     public static bool playerIsInDamageArea;
     CharacterController playerController;
@@ -33,6 +34,14 @@ public class PlayerMovement : MonoBehaviour
         //Get player input
         float xMove = Input.GetAxis("Horizontal");
         float zMove = Input.GetAxis("Vertical");
+        if (xMove > 0||zMove > 0 )
+         {
+            animationController.SetBool("IS movement?",true);
+        }
+        else 
+          {
+           animationController.SetBool("IS movement?",false);
+        }
 
         //Set movement direction
         Vector3 movementdir = transform.right * xMove + transform.forward * zMove;
