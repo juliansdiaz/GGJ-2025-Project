@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] float sphereRadius = 0.3f;
     [SerializeField] LayerMask groundMask;
+     [SerializeField] AnimationController animationController;
 
     public static bool playerIsInDamageArea;
     CharacterController playerController;

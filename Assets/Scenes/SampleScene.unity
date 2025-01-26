@@ -2555,6 +2555,74 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.0764284, y: 0.15039432, z: 6.389755}
   m_Center: {x: -0.057228565, y: -0.42480284, z: 0.53569674}
+--- !u!1001 &2070465835
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.8490438
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.474807
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
+        type: 3}
+      propertyPath: m_Name
+      value: Character_Burbujero
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c, type: 3}
 --- !u!1 &2112110674
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,6 +2808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubblesParticle: {fileID: 9181122266477250988, guid: 04538276e772b714eb9f269de29cd3d8,
     type: 3}
+  spawnPoint: {fileID: 0}
 --- !u!4 &1627328912776646828
 Transform:
   m_ObjectHideFlags: 0
@@ -3184,3 +3253,4 @@ SceneRoots:
   - {fileID: 150951332}
   - {fileID: 1489072238}
   - {fileID: 1841157436}
+  - {fileID: 2070465835}
