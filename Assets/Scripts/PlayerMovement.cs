@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] float sphereRadius = 0.3f;
     [SerializeField] LayerMask groundMask;
-    
+
+    public static bool playerIsInDamageArea;
     CharacterController playerController;
     float gravityScale = -9.81f;
     Vector3 playerVelocity;
@@ -46,6 +47,47 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             playerController.Move(movementdir * (movementSpeed * 0.8f) * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("AmmoBox") && GameManager.Instance.ammo < 100.0f)
+        {
+            Debug.Log("Bubbles charged");
+            GameManager.Instance.ammo = 100.0f;
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("DamageArea"))
+        {
+            Debug.Log("Player inside damage area");
+            playerIsInDamageArea = true;
+        }
+        else if (other.gameObject.CompareTag("DamageFear"))
+        {
+            playerIsInDamageArea = true;
+        }
+        else if (other.gameObject.CompareTag("DamageAlone"))
+        {
+            playerIsInDamageArea = true;
+        }
+        else if (other.gameObject.CompareTag("DamageSelfDemand"))
+        {
+            playerIsInDamageArea = true;
+        }
+        else if (other.gameObject.CompareTag("DamageSelfDemand"))
+        {
+            playerIsInDamageArea = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("DamageArea"))
+        {
+            Debug.Log("Player outside damage area");
+            playerIsInDamageArea = false;
         }
     }
 

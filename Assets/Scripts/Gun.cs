@@ -6,7 +6,9 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     //Variables
-   
+    [SerializeField] GameObject bubblesParticle;
+    [SerializeField] Transform spawnPoint;
+    public static bool didShoot;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +24,20 @@ public class Gun : MonoBehaviour
 
     void ShootGun()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Gun shooting");
-            //TODO Gun shoot logic
+            if(GameManager.Instance.ammo > 0)
+            {
+                didShoot = true;
+                GameObject projectile = Instantiate(bubblesParticle) as GameObject;
+                projectile.transform.position = transform.position + Camera.main.transform.position * 2;
+                Rigidbody rb = projectile.GetComponent<Rigidbody>();
+                rb.velocity = Camera.main.transform.forward * 20;
+            }
+        }
+        else
+        {
+            didShoot = false;
         }
     }
 }
