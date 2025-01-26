@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &290365843331159890
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2940146982134646522, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_text
+      value: Nada de lo que haces es suficiente.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022930786006645704, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022930786006645704, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3299999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022930786006645704, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022930786006645704, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.50531167
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022930786006645704, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5053118
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022930786006645704, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4946313
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022930786006645704, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.4946313
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022930786006645704, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022930786006645704, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022930786006645704, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 271.224
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461159147147093538, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyAnsiedad Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236930686035115112, guid: 4009e09edf8f2fb4fbf99077b526ada3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4c8ba82937c8874a84de4aed90259dc, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4009e09edf8f2fb4fbf99077b526ada3, type: 3}
