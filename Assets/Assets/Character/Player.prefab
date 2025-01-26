@@ -179,7 +179,7 @@ Transform:
   m_GameObject: {fileID: 2447073888867551290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6854913, z: -0, w: 0.72808075}
-  m_LocalPosition: {x: -0.031637453, y: 0.19500002, z: 0.10929387}
+  m_LocalPosition: {x: -0.075, y: 0.19500002, z: 0.834}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -460,11 +460,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 92cfe9c7c1f956745b4781c02ecf1043,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8873598136579098363}
+      addedObject: {fileID: 5084602019722597933}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 92cfe9c7c1f956745b4781c02ecf1043,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5084602019722597933}
+      addedObject: {fileID: 8490264587055729357}
   m_SourcePrefab: {fileID: 100100000, guid: 92cfe9c7c1f956745b4781c02ecf1043, type: 3}
 --- !u!1 &45284586888333260 stripped
 GameObject:
@@ -493,21 +493,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8873598136579098363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45284586888333260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23cd1957e872b71459da9e648ccae83d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubblesParticle: {fileID: 9181122266477250988, guid: 04538276e772b714eb9f269de29cd3d8,
-    type: 3}
-  spawnPoint: {fileID: 4323461872119420326}
 --- !u!95 &5084602019722597933
 Animator:
   serializedVersion: 5
@@ -529,6 +514,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8490264587055729357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45284586888333260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0634d0fe6ddb6d347905384833b124cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burbujaPrefab: {fileID: 5624246936748180436, guid: d77a000c933d6bd4e85565294861208e,
+    type: 3}
+  spawnPoint: {fileID: 4323461872119420326}
+  particleSystem: {fileID: 0}
 --- !u!4 &858835933120159094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 92cfe9c7c1f956745b4781c02ecf1043,
