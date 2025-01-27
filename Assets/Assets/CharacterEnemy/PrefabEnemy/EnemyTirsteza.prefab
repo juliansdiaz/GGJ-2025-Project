@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 3022930786006645704}
   - component: {fileID: 6122478704646324155}
   - component: {fileID: 4236930686035115112}
-  - component: {fileID: 5819902628184941726}
-  - component: {fileID: 3607928232290514378}
+  - component: {fileID: 8784829581656341765}
+  - component: {fileID: 352178270261555776}
   m_Layer: 0
   m_Name: EnemyTirsteza
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +36,6 @@ Transform:
   - {fileID: 3257257101599331162}
   - {fileID: 6695806667848944980}
   - {fileID: 8740326984907955600}
-  - {fileID: 436223518047438964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 271.224}
 --- !u!33 &6122478704646324155
@@ -89,7 +88,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5819902628184941726
+--- !u!65 &8784829581656341765
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,13 +103,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000002, y: 0.2, z: 10.000002}
-  m_Center: {x: 0.0000019073486, y: 0, z: 0}
---- !u!114 &3607928232290514378
+  m_Size: {x: 35, y: 35, z: 30}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &352178270261555776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,11 +118,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3461159147147093538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26588c47b72bae24eb86e1d2353df95a, type: 3}
+  m_Script: {fileID: 11500000, guid: e0df33da2df56654a8a866b7622bea33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMat: {fileID: 2100000, guid: 4d86494f2f56eed4aa32f24f2572b1ce, type: 2}
-  dialogueText: {fileID: 2940146982134646522}
+  newMaterial: {fileID: 2100000, guid: 4d86494f2f56eed4aa32f24f2572b1ce, type: 2}
+  objectToDestroy: {fileID: 0}
+  holdDuration: 3
 --- !u!1 &7450243966351735436
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +133,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3257257101599331162}
-  - component: {fileID: 4719290462395824914}
   m_Layer: 0
   m_Name: DamageArea
   m_TagString: DamageAlone
@@ -156,27 +155,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3022930786006645704}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4719290462395824914
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7450243966351735436}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 14.1, y: 5.2, z: 13.64}
-  m_Center: {x: -0.057228565, y: -0.42480284, z: 0.53569674}
 --- !u!1 &8990320092277533687
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +185,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 436223518047438964}
   m_Father: {fileID: 3022930786006645704}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8676306229013491618
@@ -244,7 +223,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 20
   m_Center: {x: 0, y: 0, z: 0}
@@ -425,7 +404,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 3022930786006645704}
+    m_TransformParent: {fileID: 8740326984907955600}
     m_Modifications:
     - target: {fileID: 2756662493716126532, guid: e3f8f33e0e4c3a444973659bf9d8bfc7,
         type: 3}
@@ -470,12 +449,12 @@ PrefabInstance:
     - target: {fileID: 5658401856739374926, guid: e3f8f33e0e4c3a444973659bf9d8bfc7,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5053118
+      value: 0.50531185
       objectReference: {fileID: 0}
     - target: {fileID: 5658401856739374926, guid: e3f8f33e0e4c3a444973659bf9d8bfc7,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.4946313
+      value: 0.49463126
       objectReference: {fileID: 0}
     - target: {fileID: 5658401856739374926, guid: e3f8f33e0e4c3a444973659bf9d8bfc7,
         type: 3}
