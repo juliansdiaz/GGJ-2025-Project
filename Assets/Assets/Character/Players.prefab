@@ -530,6 +530,7 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 8660714425520721438}
   particleSystem: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 46d73c31e2941d14cb5e86fdb46d5d20, type: 3}
 --- !u!4 &4572968942798654597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 92cfe9c7c1f956745b4781c02ecf1043,

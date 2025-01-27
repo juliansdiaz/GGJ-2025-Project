@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GunBurbuja : MonoBehaviour
 {
-    public GameObject burbujaPrefab;  // El modelo 3D de la burbuja
-    public Transform spawnPoint;      // Punto de origen de las burbujas (por ejemplo, un cañón)
-    public ParticleSystem particleSystem; // El sistema de partículas para las burbujas
+    public GameObject burbujaPrefab;          // El modelo 3D de la burbuja
+    public Transform spawnPoint;              // Punto de origen de las burbujas
+    public ParticleSystem particleSystem;     // El sistema de partículas para las burbujas
+    public AudioClip shootSound;              // El sonido del disparo
+    private AudioSource audioSource;          // Fuente de audio para reproducir el sonido
 
-    private bool isDisparando = false;  // Flag para saber si se está disparando
+    private bool isDisparando = false;        // Flag para saber si se está disparando
+    private bool audioPlayed = false;         // Flag para controlar el audio
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +20,13 @@ public class GunBurbuja : MonoBehaviour
         if (particleSystem != null)
         {
             particleSystem.Stop();
+        }
+
+        // Obtén el AudioSource del objeto o crea uno si no existe
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
         }
     }
 
@@ -32,16 +42,23 @@ public class GunBurbuja : MonoBehaviour
                 StartCoroutine(DispararBurbuja());
             }
 
-            // Si el clic está presionado, activa el sistema de partículas
+            // Activa el sistema de partículas y reproduce el audio una sola vez
             if (particleSystem != null && !particleSystem.isPlaying)
             {
                 particleSystem.Play(); // Activa el sistema de partículas
+            }
+
+            if (!audioPlayed && shootSound != null)
+            {
+                audioSource.PlayOneShot(shootSound); // Reproduce el sonido una sola vez
+                audioPlayed = true; // Marca que el audio ya se reprodujo
             }
         }
         else
         {
             // Si el clic es liberado, detiene el disparo y las partículas
             isDisparando = false;
+            audioPlayed = false; // Resetea el flag para permitir reproducir el audio nuevamente
             if (particleSystem != null && particleSystem.isPlaying)
             {
                 particleSystem.Stop(); // Detiene el sistema de partículas
