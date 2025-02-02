@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2225f2e02c5632e4eb87bcbeed116215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 350
+  mouseSensitivity: 150
   xRotation: 0
   playerBody: {fileID: 6045850501152019152}
 --- !u!1001 &4106379590469233518
@@ -440,6 +440,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8501961117841246674, guid: 92cfe9c7c1f956745b4781c02ecf1043,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e8c00897483d25d449fa53458281a2e0, type: 2}
     - target: {fileID: 5866666021909216657, guid: d2dbcc7f7a8bf6a4f9bb57e95211749c,
         type: 3}
       propertyPath: m_Controller
